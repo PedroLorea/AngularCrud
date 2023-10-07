@@ -14,7 +14,9 @@ import { MatSidenavModule }from '@angular/material/sidenav'
 import { MatCardModule }from '@angular/material/card'
 import { MatListModule }from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { ItensComponent } from './views/itens/itens.component'
+import { ItensComponent } from './views/itens/itens.component';
+import { CriarItemComponent } from './components/itens/criar-item/criar-item.component';
+import { MatButtonModule }from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ItensComponent } from './views/itens/itens.component'
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ItensComponent
+    ItensComponent,
+    CriarItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ItensComponent } from './views/itens/itens.component'
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

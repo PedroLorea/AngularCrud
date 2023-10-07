@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent} from './views/home/home.component'
 import { ItensComponent} from './views/itens/itens.component'
+import { CriarItemComponent } from './components/itens/criar-item/criar-item.component';
 
 const routes: Routes = [{
   path: "",
@@ -10,6 +11,9 @@ const routes: Routes = [{
 },{
   path: "itens",
   component: ItensComponent
+},{
+  path: "itens/criar",
+  component: CriarItemComponent
 }];
 
 @NgModule({

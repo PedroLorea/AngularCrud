@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-itens',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./itens.component.css']
 })
 export class ItensComponent {
+
+  constructor(private router: Router){ }
+
+  navegarParaCriarItem(): void{
+    this.router.navigate(['/itens/criar'])
+  }
+
 
 }
