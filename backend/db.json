@@ -1,7 +1,14 @@
 {
-    "produtos": {
-        "id": 1,
-        "nome": "Caneta",
-        "preco": 5.60
+  "itens": [
+    {
+      "id": 1,
+      "nome": "asd",
+      "preco": "123"
+    },
+    {
+      "nome": "Pedro",
+      "preco": "1",
+      "id": 2
     }
+  ]
 }
