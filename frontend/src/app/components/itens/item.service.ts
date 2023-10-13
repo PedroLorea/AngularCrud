@@ -28,4 +28,14 @@ export class ItemService {
   lista(): Observable<Item[]> {
     return this.http.get<Item[]>(this.baseUrl)
   }
+
+  procuraItemPorId(id: string): Observable<Item> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Item>(url);
+  }
+
+  atualizar(item: Item): Observable<Item> {
+    const url = `${this.baseUrl}/${item.id}`
+    return this.http.put<Item>(url, item)
+  }
 }

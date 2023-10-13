@@ -12,11 +12,11 @@
     },
     {
       "nome": "Caneta",
-      "preco": "150reais",
+      "preco": "150",
       "id": 3
     },
     {
-      "nome": "Teste",
+      "nome": "teste@gmail.com",
       "preco": "1000",
       "id": 4
     }

@@ -12,7 +12,7 @@ import { ItemService } from '../item.service';
 export class ListaItensComponent{
   
   itens: Item[] = [];
-  displayedColumns = ['id', 'nome', 'preco']
+  displayedColumns = ['id', 'nome', 'preco', 'acao']
 
   constructor(private itemServico: ItemService) { }
 

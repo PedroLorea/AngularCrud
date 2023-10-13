@@ -29,6 +29,8 @@ import { ListaItensComponent } from './components/itens/lista-itens/lista-itens.
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+import { AtualizarItemComponent } from './components/itens/atualizar-item/atualizar-item.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     ItensComponent,
     CriarItemComponent,
-    ListaItensComponent
+    ListaItensComponent,
+    AtualizarItemComponent
   ],
   imports: [
     BrowserModule,
