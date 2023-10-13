@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Item } from './item.module';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable, catchError, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,36 +15,50 @@ export class ItemService {
 
   
   mostrarMensagem(msg: string, temErro: boolean = false): void {
-    const style = temErro ? 'background-color:red;' : 'background-color:green;'
-
     this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top",
-      panelClass: [style]
+      panelClass: temErro ? 'msg-error' : 'msg-sucess'
     })
   }
 
   criar(item: Item): Observable<Item> {
-    return this.http.post<Item>(this.baseUrl, item)
+    return this.http.post<Item>(this.baseUrl, item).pipe(
+      map((obj) => obj), catchError(e => this.handleError(e))
+    )
   }
 
   lista(): Observable<Item[]> {
-    return this.http.get<Item[]>(this.baseUrl)
+    return this.http.get<Item[]>(this.baseUrl).pipe(
+      map((obj) => obj), catchError(e => this.handleError(e))
+    )
   }
 
   procuraItemPorId(id: string): Observable<Item> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Item>(url);
+    return this.http.get<Item>(url).pipe(
+      map((obj) => obj), catchError(e => this.handleError(e))
+    );
   }
 
   atualizar(item: Item): Observable<Item> {
     const url = `${this.baseUrl}/${item.id}`
-    return this.http.put<Item>(url, item)
+    return this.http.put<Item>(url, item).pipe(
+      map((obj) => obj), catchError(e => this.handleError(e))
+    )
   }
 
   excluir(id: string): Observable<Item> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Item>(url)
+    return this.http.delete<Item>(url).pipe(
+      map((obj) => obj), catchError(e => this.handleError(e))
+    )
+  }
+
+  handleError(e: any): Observable<any> {
+    console.log(e)
+    this.mostrarMensagem('Ocorreu um erro', true)
+    return EMPTY
   }
 }
