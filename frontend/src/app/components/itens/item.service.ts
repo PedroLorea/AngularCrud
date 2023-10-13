@@ -24,4 +24,8 @@ export class ItemService {
   criar(item: Item): Observable<Item> {
     return this.http.post<Item>(this.baseUrl, item)
   }
+
+  lista(): Observable<Item[]> {
+    return this.http.get<Item[]>(this.baseUrl)
+  }
 }

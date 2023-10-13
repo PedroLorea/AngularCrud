@@ -25,6 +25,10 @@ import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 
+import { ListaItensComponent } from './components/itens/lista-itens/lista-itens.component'
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +38,7 @@ import { MatInputModule } from '@angular/material/input'
     HomeComponent,
     ItensComponent,
     CriarItemComponent,
+    ListaItensComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,9 @@ import { MatInputModule } from '@angular/material/input'
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

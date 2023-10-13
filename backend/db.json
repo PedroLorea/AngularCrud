@@ -9,6 +9,16 @@
       "nome": "Pedro",
       "preco": "1",
       "id": 2
+    },
+    {
+      "nome": "Caneta",
+      "preco": "150reais",
+      "id": 3
+    },
+    {
+      "nome": "Teste",
+      "preco": "1000",
+      "id": 4
     }
   ]
 }
