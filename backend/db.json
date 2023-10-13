@@ -6,18 +6,8 @@
       "preco": "123"
     },
     {
-      "nome": "Pedro",
+      "nome": "a",
       "preco": "1",
-      "id": 2
-    },
-    {
-      "nome": "Caneta",
-      "preco": "150",
-      "id": 3
-    },
-    {
-      "nome": "teste@gmail.com",
-      "preco": "1000",
       "id": 4
     }
   ]

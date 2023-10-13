@@ -30,6 +30,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AtualizarItemComponent } from './components/itens/atualizar-item/atualizar-item.component';
+import { ExcluirItemComponent } from './components/itens/excluir-item/excluir-item.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { AtualizarItemComponent } from './components/itens/atualizar-item/atuali
     ItensComponent,
     CriarItemComponent,
     ListaItensComponent,
-    AtualizarItemComponent
+    AtualizarItemComponent,
+    ExcluirItemComponent
   ],
   imports: [
     BrowserModule,
@@ -63,4 +66,6 @@ import { AtualizarItemComponent } from './components/itens/atualizar-item/atuali
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

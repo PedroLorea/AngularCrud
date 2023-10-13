@@ -13,11 +13,15 @@ export class ItemService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  mostrarMensagem(msg: string): void {
+  
+  mostrarMensagem(msg: string, temErro: boolean = false): void {
+    const style = temErro ? 'background-color:red;' : 'background-color:green;'
+
     this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: [style]
     })
   }
 
@@ -37,5 +41,10 @@ export class ItemService {
   atualizar(item: Item): Observable<Item> {
     const url = `${this.baseUrl}/${item.id}`
     return this.http.put<Item>(url, item)
+  }
+
+  excluir(id: string): Observable<Item> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Item>(url)
   }
 }

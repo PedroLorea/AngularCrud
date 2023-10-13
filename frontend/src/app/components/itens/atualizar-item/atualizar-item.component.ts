@@ -8,6 +8,7 @@ import { Item } from '../item.module';
   templateUrl: './atualizar-item.component.html',
   styleUrls: ['./atualizar-item.component.css']
 })
+
 export class AtualizarItemComponent {
 
   item: Item = {
