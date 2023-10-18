@@ -1,4 +1,9 @@
 i.edit {
     margin-right: 10px;
-    color: black;
+    color: rgb(29, 152, 13);
+}
+
+i.delete {
+    margin-right: 10px;
+    color: rgb(255, 0, 0);
 }

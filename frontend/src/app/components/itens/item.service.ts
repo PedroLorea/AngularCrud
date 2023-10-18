@@ -15,11 +15,12 @@ export class ItemService {
 
   
   mostrarMensagem(msg: string, temErro: boolean = false): void {
+
     this.snackBar.open(msg, '', {
-      duration: 3000,
+      duration: 10000,
       horizontalPosition: "right",
       verticalPosition: "top",
-      panelClass: temErro ? 'msg-error' : 'msg-sucess'
+      panelClass: temErro ? ["msg-error"] : ["msg-success"]
     })
   }
 

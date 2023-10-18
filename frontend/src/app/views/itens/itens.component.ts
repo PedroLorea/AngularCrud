@@ -13,7 +13,7 @@ export class ItensComponent {
 
   constructor(private router: Router, private headerService: HeaderService){ 
     headerService.headerData = {
-      titulo: 'Cadastro de Produtos',
+      titulo: 'Lista',
       icone: 'storefront'
     }
   }

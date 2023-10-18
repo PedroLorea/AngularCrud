@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Item } from '../item.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-atualizar-item',
@@ -16,7 +17,7 @@ export class AtualizarItemComponent {
     preco: null
   }
 
-  constructor(private itemServico: ItemService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private itemServico: ItemService, private router: Router, private route: ActivatedRoute, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -31,7 +32,7 @@ export class AtualizarItemComponent {
 
   atualizarItem(){
     this.itemServico.atualizar(this.item).subscribe(() => {
-      this.itemServico.mostrarMensagem('Produto atualizado com sucesso!')
+      this.itemServico.mostrarMensagem('Produto atualizado com sucesso!', true)
       this.router.navigate(['/itens'])
     })
   }

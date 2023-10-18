@@ -6,4 +6,16 @@ form {
 button {
     margin-top: 20px;
     margin-right: 15px;
+    width: 30%;
+    display: inline-block;
+}
+
+.container{
+    margin-right: 80px;
+    margin-left: 80px;
+    padding: 30px;
+}
+
+.title {
+    margin-bottom: 10px;
 }

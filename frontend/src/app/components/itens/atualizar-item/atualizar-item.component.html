@@ -1,11 +1,13 @@
-<mat-card>
+<mat-card class="container">
     <mat-card-title>Atualizar Item</mat-card-title>
     <form>
+        <div>Nome: </div>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="item.nome" name="nome">
+            <input matInput [(ngModel)]="item.nome" name="nome">
         </mat-form-field>
+        <div>Preço (R$): </div>
         <mat-form-field>
-            <input matInput placeholder="Preço" [(ngModel)]="item.preco" name="preco">
+            <input matInput [(ngModel)]="item.preco" name="preco">
         </mat-form-field>
     </form>
 

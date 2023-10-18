@@ -1,9 +1,9 @@
-<mat-card>
+<mat-card class="container">
     <mat-card-title>Deletar Item</mat-card-title>
     <form>
         <div>
             <p>Nome: {{ item.nome }}</p>
-            <p>Nome: {{ item.preco }}</p>
+            <p>Preço: {{ item.preco | currency: 'BRL'}}</p>
         </div>
     </form>
 
