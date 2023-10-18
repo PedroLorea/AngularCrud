@@ -32,7 +32,7 @@ export class AtualizarItemComponent {
 
   atualizarItem(){
     this.itemServico.atualizar(this.item).subscribe(() => {
-      this.itemServico.mostrarMensagem('Produto atualizado com sucesso!', true)
+      this.itemServico.mostrarMensagem('Produto atualizado com sucesso!')
       this.router.navigate(['/itens'])
     })
   }

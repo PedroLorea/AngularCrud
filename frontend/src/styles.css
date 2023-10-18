@@ -13,11 +13,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .msg-success {
-    background: #28a745;
+    --mdc-snackbar-container-color: #28a745;
     color: #fff;
 }
 
 .msg-error {
-    background: #e35e6b;
+    --mdc-snackbar-container-color: #e35e6b;
     color: #fff;
 }

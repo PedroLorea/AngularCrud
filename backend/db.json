@@ -1,19 +1,29 @@
 {
   "itens": [
     {
-      "id": 1,
       "nome": "Bicicleta",
-      "preco": "800"
+      "preco": "800",
+      "id": 1
     },
     {
-      "nome": "a",
-      "preco": "1",
+      "nome": "Caneta",
+      "preco": "7.90",
+      "id": 2
+    },
+    {
+      "nome": "Cadeira",
+      "preco": "60",
+      "id": 3
+    },
+    {
+      "nome": "Garrafa",
+      "preco": "34",
       "id": 4
     },
     {
-      "nome": "",
-      "preco": null,
-      "id": 7
+      "nome": "Livro",
+      "preco": "10.90",
+      "id": 5
     }
   ]
 }

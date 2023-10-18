@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Router } from '@angular/router';
 import { Item } from '../item.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-criar-item',
@@ -16,7 +17,7 @@ export class CriarItemComponent {
   }
 
   constructor(private itemServico: ItemService, 
-    private router: Router){ }
+    private router: Router, private snackBar: MatSnackBar){ }
 
     criarItem(): void {
       this.itemServico.criar(this.item).subscribe(() => {
@@ -28,6 +29,5 @@ export class CriarItemComponent {
 
     cancelar(): void {
       this.router.navigate(['/itens'])
-    }
-  
+    }  
 }

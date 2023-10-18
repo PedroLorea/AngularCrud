@@ -19,3 +19,8 @@ button {
 .title {
     margin-bottom: 10px;
 }
+
+div{
+    font-size: 15px;
+    padding-bottom: 5px;
+}
